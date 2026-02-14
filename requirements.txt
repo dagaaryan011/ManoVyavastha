@@ -1,0 +1,22 @@
+# Core dependencies for Cognitive-Aware Task Scheduler
+# HackXcelerate 2026 - PS-03 Solution
+
+# Web framework
+streamlit>=1.28.0
+
+# HTTP requests (for Groq API)
+requests>=2.31.0
+
+# Data manipulation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Standard library (included in Python, listed for reference)
+# - datetime
+# - typing
+# - dataclasses
+# - json
+# - pickle
+# - collections
+# - re
+# - os

@@ -1,0 +1,250 @@
+[
+  {
+    "task_id": "LA-001",
+    "task_name": "Review Linear Algebra Theory",
+    "task_type": "theory",
+    "difficulty": "medium",
+    "cognitive_load": 6,
+    "estimated_duration": 90,
+    "prerequisites": [],
+    "priority": "medium",
+    "flexibility": "splittable",
+    "notes": "Go through notes and textbook to refresh concepts"
+  },
+  {
+    "task_id": "LA-002",
+    "task_name": "Practice Vector Space Problems",
+    "task_type": "problem_solving",
+    "difficulty": "hard",
+    "cognitive_load": 8,
+    "estimated_duration": 120,
+    "prerequisites": [
+      "LA-001"
+    ],
+    "priority": "high",
+    "flexibility": "splittable",
+    "notes": "Focus on vector operations, span, basis, and dimension"
+  },
+  {
+    "task_id": "LA-003",
+    "task_name": "Linear Transformations and Matrices Review",
+    "task_type": "theory",
+    "difficulty": "medium",
+    "cognitive_load": 6,
+    "estimated_duration": 90,
+    "prerequisites": [
+      "LA-001"
+    ],
+    "priority": "medium",
+    "flexibility": "splittable",
+    "notes": "Review kernel, image, and rank of linear transformations"
+  },
+  {
+    "task_id": "LA-004",
+    "task_name": "Practice Linear Transformation and Matrix Problems",
+    "task_type": "problem_solving",
+    "difficulty": "hard",
+    "cognitive_load": 8,
+    "estimated_duration": 120,
+    "prerequisites": [
+      "LA-002",
+      "LA-003"
+    ],
+    "priority": "high",
+    "flexibility": "splittable",
+    "notes": "Focus on finding matrices of linear transformations and their properties"
+  },
+  {
+    "task_id": "LA-005",
+    "task_name": "Revision of Determinants and Eigenvalues",
+    "task_type": "revision",
+    "difficulty": "medium",
+    "cognitive_load": 6,
+    "estimated_duration": 90,
+    "prerequisites": [
+      "LA-001",
+      "LA-003"
+    ],
+    "priority": "medium",
+    "flexibility": "splittable",
+    "notes": "Go through key concepts and formulas related to determinants and eigenvalues"
+  },
+  {
+    "task_id": "LA-006",
+    "task_name": "Mock Test for Linear Algebra",
+    "task_type": "exam_simulation",
+    "difficulty": "hard",
+    "cognitive_load": 9,
+    "estimated_duration": 120,
+    "prerequisites": [
+      "LA-001",
+      "LA-002",
+      "LA-003",
+      "LA-004",
+      "LA-005"
+    ],
+    "priority": "urgent",
+    "flexibility": "atomic",
+    "notes": "Simulate the actual test experience to identify knowledge gaps"
+  },
+  {
+    "task_id": "LA-007",
+    "task_name": "Final Revision and Weakness Addressal",
+    "task_type": "revision",
+    "difficulty": "medium",
+    "cognitive_load": 7,
+    "estimated_duration": 90,
+    "prerequisites": [
+      "LA-006"
+    ],
+    "priority": "high",
+    "flexibility": "splittable",
+    "notes": "Focus on weaknesses identified during the mock test"
+  },
+  {
+    "task_id": "SDP-001",
+    "task_name": "Prepare Dog Food",
+    "task_type": "other",
+    "difficulty": "easy",
+    "cognitive_load": 2,
+    "estimated_duration": 15,
+    "prerequisites": [],
+    "priority": "low",
+    "flexibility": "atomic",
+    "notes": "Gather dog food and bowls"
+  },
+  {
+    "task_id": "SDP-002",
+    "task_name": "Feed the Dog",
+    "task_type": "other",
+    "difficulty": "easy",
+    "cognitive_load": 1,
+    "estimated_duration": 5,
+    "prerequisites": [
+      "SDP-001"
+    ],
+    "priority": "low",
+    "flexibility": "atomic",
+    "notes": "Pour food into the dog's bowl"
+  },
+  {
+    "task_id": "ST-001",
+    "task_name": "Prepare Dog Food",
+    "task_type": "other",
+    "difficulty": "easy",
+    "cognitive_load": 2,
+    "estimated_duration": 15,
+    "prerequisites": [],
+    "priority": "low",
+    "flexibility": "atomic",
+    "notes": "Check if dog food is available"
+  },
+  {
+    "task_id": "ST-002",
+    "task_name": "Feed the Dog",
+    "task_type": "other",
+    "difficulty": "easy",
+    "cognitive_load": 1,
+    "estimated_duration": 5,
+    "prerequisites": [
+      "ST-001"
+    ],
+    "priority": "low",
+    "flexibility": "atomic",
+    "notes": "Ensure the dog has access to water"
+  },
+  {
+    "task_id": "LA-1",
+    "task_name": "Review Linear Algebra Theory",
+    "task_type": "theory",
+    "difficulty": "medium",
+    "cognitive_load": 6,
+    "estimated_duration": 90,
+    "prerequisites": [],
+    "priority": "high",
+    "flexibility": "splittable",
+    "notes": "Focus on Vector Spaces and Linear Transformations"
+  },
+  {
+    "task_id": "LA-2",
+    "task_name": "Practice Linear Algebra Problems",
+    "task_type": "problem_solving",
+    "difficulty": "hard",
+    "cognitive_load": 8,
+    "estimated_duration": 120,
+    "prerequisites": [
+      "LA-1"
+    ],
+    "priority": "high",
+    "flexibility": "splittable",
+    "notes": "Solve problems on Determinants, Eigenvalues, and Eigenvectors"
+  },
+  {
+    "task_id": "LA-3",
+    "task_name": "Linear Algebra Past Year Questions Revision",
+    "task_type": "revision",
+    "difficulty": "medium",
+    "cognitive_load": 7,
+    "estimated_duration": 90,
+    "prerequisites": [
+      "LA-2"
+    ],
+    "priority": "medium",
+    "flexibility": "splittable",
+    "notes": "Review and practice past year questions"
+  },
+  {
+    "task_id": "LA-4",
+    "task_name": "Linear Algebra Mock Test",
+    "task_type": "exam_simulation",
+    "difficulty": "hard",
+    "cognitive_load": 9,
+    "estimated_duration": 120,
+    "prerequisites": [
+      "LA-3"
+    ],
+    "priority": "high",
+    "flexibility": "atomic",
+    "notes": "Simulate the actual test experience"
+  },
+  {
+    "task_id": "LA-5",
+    "task_name": "Review and Analyze Mistakes",
+    "task_type": "revision",
+    "difficulty": "medium",
+    "cognitive_load": 6,
+    "estimated_duration": 60,
+    "prerequisites": [
+      "LA-4"
+    ],
+    "priority": "medium",
+    "flexibility": "splittable",
+    "notes": "Review mistakes from the mock test and analyze areas for improvement"
+  },
+  {
+    "task_id": "LA-6",
+    "task_name": "Final Linear Algebra Revision",
+    "task_type": "revision",
+    "difficulty": "medium",
+    "cognitive_load": 7,
+    "estimated_duration": 90,
+    "prerequisites": [
+      "LA-5"
+    ],
+    "priority": "high",
+    "flexibility": "splittable",
+    "notes": "Final review of key concepts and formulas"
+  },
+  {
+    "task_id": "LA-7",
+    "task_name": "Get Enough Rest and Stay Hydrated",
+    "task_type": "other",
+    "difficulty": "easy",
+    "cognitive_load": 2,
+    "estimated_duration": 480,
+    "prerequisites": [],
+    "priority": "low",
+    "flexibility": "atomic",
+    "notes": "Ensure physical and mental well-being before the test"
+  }
+]

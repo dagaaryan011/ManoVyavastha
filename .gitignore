@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual Environment
+time_table/
+env/
+.env
+
+# Runtime Data (User profiles & Logs)
+# It's usually better NOT to commit these so you start fresh on other machines
+# Comment these out if you specifically WANT to save your current trained state
+user_profile.json
+task_history.csv
+saved_agents/
+
+# IDE settings
+.vscode/
+.idea/

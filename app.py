@@ -331,7 +331,7 @@ def main():
     scheduler = st.session_state.scheduler
     llm = LLMTaskDecomposer()
 
-    st.title("Cognitive-Aware Task Scheduler")
+    st.title("Manovyavastha")
 
     tabs = st.tabs(["Plan", "My Day", " Analytics", " History"])
     with st.sidebar:

@@ -135,19 +135,19 @@ def render_teams_task_card(item):
     """Renders the HTML card for a task/break."""
     if item.type == "break":
         border_class = "border-break"
-        icon = "☕"
+        icon = ""
         load_badge = "RECOVERY"
     elif item.cognitive_load >= 8:
         border_class = "border-red"
-        icon = "🔥"
+        icon = ""
         load_badge = f"HIGH LOAD ({item.cognitive_load})"
     elif item.cognitive_load >= 5:
         border_class = "border-yellow"
-        icon = "⚡"
+        icon = ""
         load_badge = f"MED LOAD ({item.cognitive_load})"
     else:
         border_class = "border-green"
-        icon = "✅"
+        icon = ""
         load_badge = f"LOW LOAD ({item.cognitive_load})"
 
     start_str = item.start_time.strftime("%H:%M")
@@ -331,11 +331,11 @@ def main():
     scheduler = st.session_state.scheduler
     llm = LLMTaskDecomposer()
 
-    st.title("🧠 Cognitive-Aware Task Scheduler")
+    st.title("Cognitive-Aware Task Scheduler")
 
-    tabs = st.tabs(["📝 Plan", "📅 My Day", "📈 Analytics", "📜 History"])
+    tabs = st.tabs(["Plan", "My Day", " Analytics", " History"])
     with st.sidebar:
-        st.header("🧠 Cognitive Status")
+        st.header("Cognitive Status")
         
         # Get current fatigue
         current_fatigue = st.session_state.fatigue_log[-1] if st.session_state.fatigue_log else 0
@@ -345,16 +345,16 @@ def main():
         
         # Dynamic advice based on fatigue
         if current_fatigue > 70:
-            st.error("⚠️ High Fatigue! Take a break.")
+            st.error("High Fatigue! Take a break.")
         elif current_fatigue > 40:
             st.warning("⚡ Energy dipping. Plan lighter tasks.")
         else:
-            st.success("✅ Brain is fresh. Tackle hard tasks!")
+            st.success("Brain is fresh. Tackle hard tasks!")
 
         st.divider()
         st.metric("Tasks Completed", sum(1 for h in st.session_state.history_log if h['outcome'] == 'completed'))
         
-        if st.button("💾 Save Progress"):
+        if st.button("Save Progress"):
             save_agents() # (Using your wrapper function)
             st.success("Saved!")
     # ------------------ PLAN ------------------
@@ -439,12 +439,12 @@ def main():
     # ------------------ ANALYTICS ------------------
     # TAB 3: Performance Analytics
     with tabs[2]:
-        st.header("📊 Performance Analytics & Learning Progress")
+        st.header("Performance Analytics & Learning Progress")
         
         # FIX 1: Use 'history_log', not 'task_history'
         if len(st.session_state.history_log) == 0:
             st.info("""
-            📈 **No data yet!** Complete some tasks to see your learning analytics:
+            **No data yet!** Complete some tasks to see your learning analytics:
             1. Generate a schedule in Tab 1
             2. Mark tasks as complete/failed in Tab 2
             3. Come back here to see how the system learns YOUR cognitive patterns!
@@ -469,7 +469,7 @@ def main():
             # ================================================================
             # SECTION 1: OVERVIEW METRICS
             # ================================================================
-            st.subheader("📈 System Learning Overview")
+            st.subheader("system Learning Overview")
             
             col1, col2, col3, col4 = st.columns(4)
             
@@ -515,23 +515,23 @@ def main():
             # ================================================================
             # SECTION 2: DECOMPOSED RL AGENTS DASHBOARD
             # ================================================================
-            st.subheader("🤖 Decomposed RL Agents")
+            st.subheader("Decomposed RL Agents")
             
             col_time, col_duration, col_break = st.columns(3)
             
             # FIX 3: Access agents directly from session_state
             with col_time:
-                st.markdown("#### ⏰ Time Agent")
+                st.markdown("#### Time Agent")
                 st.metric("States Learned", stats['time_agent_states'])
                 st.info("**Learns:** WHEN to schedule tasks")
             
             with col_duration:
-                st.markdown("#### ⏱️ Duration Agent")
+                st.markdown("####  Duration Agent")
                 st.metric("States Learned", stats['duration_agent_states'])
                 st.info("**Learns:** HOW MUCH time you need")
             
             with col_break:
-                st.markdown("#### ☕ Break Agent")
+                st.markdown("#### Break Agent")
                 st.metric("States Learned", stats['break_agent_states'])
                 st.info("**Learns:** WHEN you need breaks")
             
@@ -540,7 +540,7 @@ def main():
             # ================================================================
             # SECTION 3: COGNITIVE FINGERPRINT
             # ================================================================
-            st.subheader("🧠 Your Cognitive Fingerprint")
+            st.subheader(" Your Cognitive Fingerprint")
             
             # FIX 4: Use 'user_profile', not 'profile_manager'
             profile = st.session_state.user_profile.profile
@@ -578,7 +578,7 @@ def main():
             # ================================================================
             # SECTION 6: FATIGUE MANAGEMENT
             # ================================================================
-            st.subheader("😴 Fatigue Evolution")
+            st.subheader(" Fatigue Evolution")
             
             if len(df_history) > 0:
                 df_fatigue = df_history.copy()
